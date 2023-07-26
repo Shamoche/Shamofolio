@@ -1,0 +1,138 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/*===== VARIABLES =====*/
+:root {
+  /* Header Height */
+  --header-height: 3rem;
+  --font-semi: 600;
+
+  /* Colors */
+  /* Purple 260 - Red 355 - Blue 224 - Pink 340 */
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+
+  /* Fonts and Typography */
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+
+  /* Margins */
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /* Z-index */
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== CLASS CSS =====*/
+.section-title {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+  }
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* ... Add the rest of the code for other sections and components ... */
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 320px) {
+  .home {
+    row-gap: 2rem;
+
+    &__img {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .home {
+    padding: 4rem 0 2rem;
+    &__social {
+      padding-top: 0;
+      padding-bottom: 2.5rem;
+      flex-direction: row;
+      align-self: flex-end;
+
+      &-icon {
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
+      }
+    }
+    &__img {
+      width: 300px;
+      bottom: 25%;
+    }
+  }
+
+  /* ... Add more media queries for other screen sizes ... */
+}
+
+/* ... Add more media queries for other screen sizes ... */
